@@ -77,7 +77,7 @@ function renderMainMenu(meals){
                             <img class="w-100" src="${meals[i].strMealThumb}" alt="">
                        
                             <div data-index="${i}" class="overlay position-absolute d-flex justify-content-start align-items-center ">
-                            <div><p  class="text-black ps-3">${meals[i].strMeal}</p></div>
+                            <div><p  class="ps-4 title">${meals[i].strMeal}</p></div>
                             
                             </div>
                         </div>
@@ -286,6 +286,7 @@ $("#search").click(function(){
 })
 
 $("#search-name").keyup( function(){
+    $("#special-recipe").fadeOut(1000);
     $("#main-recipes").children().remove();
     getMainMenu("s",keyName.val());
     $("#main-recipes").fadeIn(1000)
@@ -293,6 +294,7 @@ $("#search-name").keyup( function(){
 })
 
 $("#search-letter").keyup( function(){
+    $("#special-recipe").fadeOut(1000);
     $("#main-recipes").children().remove();
     getMainMenu("f",letterName.val());
     $("#main-recipes").fadeIn(1000)
@@ -318,13 +320,14 @@ async function getCategoryMenu(){
 function renderCategoryMenu(meals){
     recipes=''
       for(var i =0; i<meals.length;i++){
+        let cuttedDescription = meals[i].strCategoryDescription.split(" ").splice(0,7).join(" ")
             recipes+=`<div class="col-md-6 col-lg-3">
                         <div class="item text-center position-relative">
                             <img class="w-100" src="${meals[i].strCategoryThumb}" alt="">
         
-                            <div data-index="${i}" class="overlay position-absolute d-flex flex-column justify-content-start align-items-center ">
-                            <p  class="text-black ps-3">${meals[i].strCategory}</p>
-                            <p  class="text-black fs-6 ps-3">${meals[i].strCategoryDescription}</p>
+                            <div data-index="${i}" class="overlay position-absolute d-flex flex-column justify-content-around align-items-center ">
+                            <p  class="tittle">${meals[i].strCategory}</p>
+                            <p  class="dsescript">${cuttedDescription}</p>
                             </div>
                         </div>
                     </div>`
@@ -364,8 +367,8 @@ function renderSpesificMenu(meals){
             recipes+=`<div class="col-md-6 col-lg-3">
                         <div class="item text-center position-relative">
                             <img class="w-100" src="${meals[i].strMealThumb}" alt="">
-                            <div data-index="${i}" class="overlay position-absolute d-flex flex-column justify-content-start align-items-center ">
-                            <p  class="text-black ps-3">${meals[i].strMeal}</p>
+                            <div data-index="${i}" class="overlay position-absolute d-flex flex-column justify-content-center align-items-center ">
+                            <p  class="title p-2">${meals[i].strMeal}</p>
                             </div>
                         </div>
                     </div>`

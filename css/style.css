@@ -91,11 +91,23 @@ body{
 .fa-bowl-food{
     color: #9ee650ab;
 }
-.item .overlay p{
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 1.2;
+.item .overlay .tittle, .item .overlay p{
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1.01;
     z-index: 55;
+    margin: 0px;
+    padding: 0px;
+    color:rgb(0, 0, 0);
+}
+.item .overlay .dsescript{
+    font-size: 1.12rem;
+    font-weight: 600;
+    line-height: 1.01;
+    z-index: 55;
+    margin: 0px;
+    padding: 0rem 0.5rem;
+    color:rgb(10, 10, 14);
 }
 #search-side-nav{
     margin: 0.25rem auto;
