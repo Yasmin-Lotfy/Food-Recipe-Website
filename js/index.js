@@ -4,7 +4,8 @@ $(document).ready(function(){
     let meals =[];
    let keyName = '';
    let letterName = '';
-   $("#contact-us").fadeOut(7);
+//    $("#contact-us").fadeOut(7);
+   $("#contact-us").css("display","none")
 
    
 
@@ -228,7 +229,7 @@ function renderMainMenu(meals){
                             </div>
                             
                             <div class="recip-btns">
-                                <a href="${meals[clickedIndex].strSource}" class="btn mb-2 btn-success">Source</a>
+                                <a href="${meals[clickedIndex].strSource}" class="btn btn-success">Source</a>
                                 <a href="${meals[clickedIndex].strYoutube}" class="btn btn-danger">youtube</a>
                             </div>
                         </div>`;
