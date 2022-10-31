@@ -290,12 +290,6 @@ body{
     display: none;
 }
 
-@media screen and (max-width:768px) {
-    .item .overlay .tittle, .item .overlay p{
-        font-size: 1.8rem;
-    }
-}
-
 @media screen and (max-width:576px) {
     .w-25 {
         width: 70%!important;
@@ -308,3 +302,9 @@ body{
     }
     
 }
+@media screen and (max-width:768px) {
+    .item .overlay .tittle, .item .overlay p{
+        font-size: 1.7rem;
+    }
+}
+
