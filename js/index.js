@@ -468,8 +468,9 @@ async function getAraMeal(keyName){
 
 // function to fire when we click on the ingredients side nav bar
 $("#ing").click(function(){
-    $("#special-recipe").fadeOut(10);
+    $("#special-recipe").fadeOut(100);
     $("#main-recipes").children().remove();
+    $("#contact-us").css("display","none")
     $("#search-side-nav").css("display","none");
     closeSideNav()
     getIngredientMenu()
