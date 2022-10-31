@@ -93,7 +93,7 @@ body{
 }
 .item .overlay .tittle, .item .overlay p{
     font-size: 1.6rem;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1.01;
     z-index: 55;
     margin: 0px;
