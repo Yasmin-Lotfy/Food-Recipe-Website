@@ -285,6 +285,20 @@ $("#search").click(function(){
 
 })
 
+$("#search-name").keyup( function(){
+    $("#main-recipes").children().remove();
+    getMainMenu("s",keyName.val());
+    $("#main-recipes").fadeIn(1000)
+
+})
+
+$("#search-letter").keyup( function(){
+    $("#main-recipes").children().remove();
+    getMainMenu("f",letterName.val());
+    $("#main-recipes").fadeIn(1000)
+
+})
+
 // the function List all Categories, Area, Ingredients
 // letter will be c or a or i
 
