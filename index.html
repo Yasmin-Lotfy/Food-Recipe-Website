@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-white bg-black">
+    <!-- start the side menu bar -->
+    <section id="sideBar" class="d-flex justify-content-between">
+        <div class="side-content d-flex flex-column justify-content-between">
+            <ul>
+                <li id="search">Search</li>
+                <li id="cat">Categories</li>
+                <li id="area">Area</li>
+                <li id="ing">Ingredients</li>
+                <li id="contact">Contact us</li>
+            </ul>
+            <div class="icons text-muted pb-5">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe "></i>
+                    <div class="copy-writes">
+                        <p class="">Copyright Â© 2022 All Rights Reserved</p>
+                    </div>
+            </div>
+           
+        </div>
+        <div class="side-icons py-3 bg-white d-flex flex-column justify-content-between align-items-center">
+            <div class="text-center">
+                <img src="image/logo.png" class="w-75 ">
+            </div>
+            <div>
+                <i id="menu-open" class=" fa-solid fa-bars text-black"></i>
+                <i id="menu-close" class="fa-solid fa-x text-black"></i>
+            </div>
+            <div class="d-flex flex-column align-items-center ">
+                <i class="fa-solid fa-globe text-black"></i>
+                <i class="fa-solid fa-share-nodes text-black"></i>
+            </div>
+        </div>
+    </section>
+    <!-- end the side menu bar -->
+
+    <!-- start main menu -->
+    <section id="main-menu" class="">
+        <div class="container w-75 my-5">
+            <!-- section of the grid meals -->
+
+             <!-- start section of the Search side Nav -->
+             <div id="search-side-nav" class=" row gy-5 gx-5">
+                <div class="search-form d-flex justify-content-between align-items-center">
+                    <input id="search-name" type="text" placeholder="Search By Name...." class="bg-black w-100 text-white form-control">
+                    <input id="search-letter" type="text" placeholder="Search By First Letter...." class="bg-black text-white w-100 form-control">
+                </div>
+                
+            </div>
+            <!-- end section of the Search side Nav -->
+            <div id="main-recipes" class=" row p-2 gy-5 gx-5">
+
+            </div>
+            <!-- end section of grid meals -->
+
+            <!-- start section of the clicked meal -->
+            <div id="special-recipe" class=" row p-2 gy-5 gx-5">
+            </div>
+            <!-- end section of the clicked meals -->
+            <!-- start of contact us section  -->
+            <div id="contact-us">
+                <div class="container w-75 my-5 m-auto text-center">
+                    <h2>Contact Us</h2>
+                    <div class="row gx-4 gy-4 mt-5">
+                        <div class="col-md-6">
+                            <div class="contact-data text-end">
+                                <input id="u-name" type="text" placeholder="Enter Your Name" class="bg-black  text-mute  form-control w-100">
+                            <p class="error-msg error-name"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-data">
+                                <input id="u-mail" type="email" placeholder="Enter Your Email" class="bg-black text-mute  form-control w-100">
+                                
+                                <p class="error-msg error-email"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-data">
+                                <input id="u-phone" type="tel" placeholder="Enter Your Phone" class="bg-black text-mute form-control w-100">
+                                <p class="error-msg error-phone"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-data">
+                                <input id="u-age" type="number" placeholder="Enter Your Age" class="bg-black text-mute form-control w-100">
+                                <p class="error-msg error-age"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-data">
+                                <input id="u-pass1" type="password" placeholder="Enter Password" class="bg-black text-mute form-control w-100">
+                                <p class="error-msg error-pass1"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-data">
+                                <input id="u-pass2" type="password" placeholder="Enter Re-Password" class="bg-black text-mute form-control w-100">
+                                <p class="error-msg error-pass2"></p>
+                            </div>
+                        </div>
+                        <button id="submit" class="btn btn-outline-danger w-25 m-auto mt-4">Submit</button>
+                        <div class="authMessage">
+                            <p class="error-msg">jfjfj</p>
+                        </div>
+                    </div>
+        
+            </div>
+            </div>
+            <!-- end of contact us section -->
+
+            
+        </div>
+
+    </section>
+
+
+   
+    
+
+    <section id="load-screen">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+    </section>
+    <!-- end main menu -->
+    
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+body{
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+/* start the side menu section */
+#sideBar{
+    position: fixed;
+    z-index: 9999;
+    background-color: #000;
+    height: 100vh;
+    width:350px;
+    left:0px;
+
+}
+#sideBar .side-content {
+    padding-left: 2rem;
+}
+#sideBar .side-content ul{
+    list-style: none;
+    padding: 0px;
+    position: relative;
+    height: 70%;
+}
+#sideBar .side-content ul li{
+    font-size: 1.2rem;
+    padding-top: 10rem ;
+    transition: 0.5s all;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+.side-content .icons i{
+    font-size: 1.09rem;
+    padding: 1.1rem 1.1rem 1.1rem 0;
+    cursor: pointer;
+    transition: 0.5s color;
+
+}
+.side-content .icons i:hover{
+    color:rgb(122, 93, 93)
+
+}
+.copy-writes p{
+    font-size: 1.04rem;
+
+}
+.side-icons {
+    width: 75px;
+}
+.side-icons i{
+    font-size: 2.1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.side-icons .d-flex i{
+    font-size: 1.3rem;
+    
+   
+}
+#menu-close{
+    display: none;
+}
+
+/* end styling side menu section */
+/* start main menu */
+
+#main-menu{
+    padding-top: 0.5rem;
+}
+.item{
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+.item .overlay{
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left:0;
+    transition: 0.3s all;
+}
+.item:hover .overlay{
+    top:0px;
+    cursor: pointer;
+    z-index: 555;
+}
+.fa-bowl-food{
+    color: #9ee650ab;
+}
+.item .overlay p{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    z-index: 55;
+}
+#search-side-nav{
+    margin: 0.25rem auto;
+    
+}
+.fa-city{
+    color: rgb(135,27,13);
+}
+
+#main-recipes, #special-recipe, #contact-us{
+    margin: 1rem auto;
+}
+@media screen and (max-width:576px) {
+    .container{
+        margin-left: 4rem;
+    }
+    .item .overlay p{
+        font-size: 1.4rem;
+       
+    }
+}
+
+
+
+/* end main menu */
+
+/* load screen */
+#load-screen{
+    position: fixed;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+    margin: 100px auto 0;
+    width: 70px;
+    text-align: center;
+  }
+  
+  .spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }
+
+/* end of load screen */
+/*start styling of the clicked meal  */
+#special-recipe .click-caption{
+    font-size: 2.6rem;
+
+}
+#special-recipe h2{
+    font-size: 2.5rem;
+}
+#special-recipe p{
+    font-size: 1.08rem;
+    text-align: justify;
+}
+#special-recipe h3{
+    font-size: 1.08rem;
+    font-weight: 900;
+}
+#special-recipe span{
+    font-weight: 200;
+}
+#special-recipe .tags ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+#special-recipe .tags ul li{
+    display: inline-block;
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    border-radius: 10px;
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+#special-recipe .tags ul li:empty{
+    background-color: red;
+    padding: 0;
+   
+}
+#special-recipe .ingredient ul li{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+#special-recipe .recip-btns{
+    margin-top:2rem;
+}
+#special-recipe .btn{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-right: 0.5rem;
+}
+/*end styling of the clicked meal  */
+
+/* styling of the search side nav */
+#search-side-nav input{
+    padding: 1rem 0.25rem;
+    outline: none;
+    margin-right: 0.8rem;
+}
+#search-side-nav input::placeholder{
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+}
+
+/* end styling of the search side nav */
+
+/* start styling contact form */
+#contact-us .form-control {
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 .5rem 1rem rgba(255,255,255,.1)!important;
+    color: #fff;
+}
+
+#contact-us .form-control.form-success {
+    border-bottom: 4px solid green;
+}
+#contact-us .form-control.form-error {
+    border-bottom: 4px solid red;
+}
+
+#contact-us .input::placeholder{
+    font-size: 1.3rem;
+    
+}
+
+#contact-us .error-msg{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 0.5rem 1.25rem;
+    margin:0.5rem ;
+    text-align: center;
+    display: none;
+}
