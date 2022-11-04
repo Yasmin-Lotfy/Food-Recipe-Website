@@ -63,15 +63,11 @@ async function getMainMenu(s,searchKey){
 
 }
 
-
-
-
 // that function that render main meals in the main menu
 function renderMainMenu(meals){
     $("#main-recipes").children().remove();
 
     recipes=``;
-        console.log("no")
         for(var i =0; i<meals.length;i++){
             recipes+=`<div class="col-md-6 col-lg-3">
                         <div class="item text-center position-relative">
@@ -91,8 +87,11 @@ function renderMainMenu(meals){
     // fire the detailed menu when clicked on the overlay to get fully details for the recipe 
     $(".item").click(function(e){
 
-             console.log("helloxxx")
-        let clickedIndex = $(e.target).attr("data-index");
+
+            //  console.log($(e.currentTarget).children(".overlay"))
+            //  console.log(e.eventPahse)
+
+        let clickedIndex = $(e.currentTarget).children(".overlay").attr("data-index");
         console.log(meals[clickedIndex]);
         let x=''
     
@@ -337,9 +336,9 @@ function renderCategoryMenu(meals){
         $("#main-recipes").append(recipes);
         $("#main-recipes").fadeIn(1000)
 
-        $(".overlay").click(function(e){
+        $(".item").click(function(e){
             $("#special-recipe").children().remove()
-                let clickedIndex = $(e.target).attr("data-index");
+                let clickedIndex =  $(e.currentTarget).children(".overlay").attr("data-index");
             let clickedMeal = meals[clickedIndex]
             console.log(clickedMeal.strCategory);
 
@@ -378,9 +377,9 @@ function renderSpesificMenu(meals){
         $("#main-recipes").append(recipes);
         $("#main-recipes").fadeIn(1000)
 
-        $(".overlay").click(function(e){
+        $(".item").click(function(e){
             $("#special-recipe").children().remove()
-            let clickedIndex = $(e.target).attr("data-index");
+            let clickedIndex = $(e.currentTarget).children(".overlay").attr("data-index");
             let clickedMeal = meals[clickedIndex]
             keyName = clickedMeal.strMeal;
             $("#main-recipes").children().remove();
@@ -430,7 +429,7 @@ function renderAreaMenu(meals){
     recipes=''
       for(var i =0; i<meals.length;i++){
          recipes+=`<div class="col-md-6 col-lg-3">
-                    <div class="item text-center position-relative">
+                    <div data-index="${i}" class="item text-center position-relative">
                         <i data-index="${i}" class="fa-solid fa-city fa-4x"></i>
                         <div data-index="${i}" class="d-flex justify-content-center align-items-center ">
                         <div><p  class="text-white fs-3">${meals[i].strArea}</p></div>
@@ -443,9 +442,10 @@ function renderAreaMenu(meals){
         $("#main-recipes").append(recipes);
         $("#main-recipes").fadeIn(1000)
 
-        $(".col-md-6").click(function(e){
+        $(".item").click(function(e){
+            // console.log( $(e.currentTarget))
             $("#special-recipe").children().remove()
-            let clickedIndex = $(e.target).attr("data-index");
+            let clickedIndex = $(e.currentTarget).attr("data-index");
             let clickedMeal = meals[clickedIndex]
             keyName = clickedMeal.strArea;
             $("#main-recipes").children().remove();
@@ -494,10 +494,10 @@ async function getIngredientMenu(){
         let splitWord =  meals[i].strDescription.split(" ").splice(0,20).join(" ")
         // console.log(splitWord)
          recipes+=`<div class="col-md-6 col-lg-3">
-                    <div class="item ingredient text-center position-relative">
+                    <div data-index="${i}" class="item ingredient text-center position-relative">
 
-                        <i data-index="${i}" class="fa-solid fa-bowl-food fa-4x"></i>
-                        <div data-index="${i}" class="d-flex flex-column justify-content-center align-items-center ">
+                        <i  class="fa-solid fa-bowl-food fa-4x"></i>
+                        <div  class="d-flex flex-column justify-content-center align-items-center ">
                         <div><p  class="text-white fs-3">${meals[i].strIngredient}</p></div>
                         <div><p  class="text-white fs-6">${splitWord}</p></div>
                         
@@ -509,9 +509,9 @@ async function getIngredientMenu(){
         $("#main-recipes").append(recipes);
         $("#main-recipes").fadeIn(1000)
 
-        $(".ingredient").click(function(e){
+        $(".item").click(function(e){
             $("#special-recipe").children().remove()
-            let clickedIndex = $(e.target).attr("data-index");
+            let clickedIndex = $(e.currentTarget).attr("data-index");
             let clickedMeal = meals[clickedIndex]
             keyName = clickedMeal.strIngredient;
             $("#main-recipes").children().remove();

@@ -81,7 +81,7 @@ body{
     height: 100%;
     top: 100%;
     left:0;
-    transition: 0.3s all;
+    transition: 0.7s all;
 }
 .item:hover .overlay{
     top:0px;
